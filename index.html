@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henry's Portfolio</title>
+  <meta name="discription" content="">
+  <meta name="author" content="Henry">
+  <link rel="icon" type="image/png" href="/image/Henry logo.png">
+  <script src="https://kit.fontawesome.com/1d9edba87f.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- Header-->
+  <nav class="header">
+    <div class="nav">
+      <div class="nav-left">
+        <i class="fab fa-diaspora"></i>
+        <a href="#" class="name">Henry</a>
+        <!-- <span class="name">Henry</span> -->
+      </div>
+      <ul class="nav-right">
+        <li class="menu-item active" data-link="#home">home</li>
+        <li class="menu-item" data-link="#about">about</li>
+        <li class="menu-item" data-link="#skill">skill</li>
+        <li class="menu-item" data-link="#mywork">mywork</li>
+        <li class="menu-item" data-link="#testimonial">testimonial</li>
+        <li class="menu-item" data-link="#contact">contact</li>
+      </ul>
+      <!-- toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+    
+    <!-- The body of the first page  -->
+  <section class="body-group" id="home">
+    <div class="home__container">
+      <img src="/image/henry.JPG" 
+           alt="Henry's profile photo" 
+          class="henry-photo">
+      <span class="b-hell">Hi</span> <!-- 강의에서는 h1으로 씀 -->
+      <span class="b-me">I'm Henry Chun</span>
+      <div> </div>
+      <span class="b-discription">A Front-end developer with a wealth of experience in IT</span>
+      <button class="b-contact" data-link="#contact">
+        CONTACT ME</button>
+    </div>
+  </section>
+  <!--body1-->
+  <section class="body1" id="about">
+    <div class="body1-group">
+      <div class="title1-group">
+        <div class="t1-about">About me</div> <!-- h1으로 -->
+        <div class="content1-group">
+          <p class="t1-contents">A developer with C who played the role of project and 
+            quality manager is looking for a job by transferring the career to 
+            <span style="color:#64ffda">a front-end developer.</span> 
+            With experience and knowledge of many projects, I can develop a more intuitive and user-friendly web, 
+            and I would like to keep better relationships <span style="color:#64ffda">by focusing on teamwork</span>.
+          </p> 
+        </div>
+      <div class="section__container">
+        <ul class="skill-group">
+          <li class="skill">
+            <div class="skill-div">
+              <i class="fab fa-html5"></i>
+            </div>
+            <span class="s1-major">Front-end</span>
+            <span class="s1-subject">HTML,CSS,JavaScript,<br>JQuery,React</span>
+          </li>
+          <!-- <li class="skill">
+            <div class="skill-div">
+              <i class="fas fa-mobile"></i>
+            </div>
+            <span class="s1-major">Mobile</span>
+            <span class="s1-subject">Android,IOS,React Native,Flutter,<br>Java,Swift,Kotlin</span>
+          </li> -->
+          <li class="skill">
+            <div class="skill-div">
+              <i class="fas fa-server"></i>
+            </div>
+            <span class="s1-major">Back-end</span>
+            <span class="s1-subject">NodeJS,Express,<br>FireBase,Rest APIs</span>
+          </li>
+        </ul>
+        <div class="content2-group">
+          <p class="t2-contents">
+            I have been studying skills of front-end.<br> 
+            I will continue to study so that I can implement more detailed and sophisticated technologies.<br>
+            I will do it until it works!
+            <span style="color:#64ffda">Never Give Up!</span> 
+           
+          </p> 
+        </div>
+        <!-- <ul class="career-group">
+          <li class="company">
+            <i class="fab fa-google-plus-square"></i>
+            <div class="c-career">
+              <span class="c-role">Currently working at Samsung as Software ENgineer</span>
+              <span class="c-year">2019 Sep - until now</span>
+            </div>
+          </li>
+          <li class="company">
+            <i class="fab fa-apple"></i>
+            <div class="c-career">
+              <span class="c-role">Currently working at Samsung as Software ENgineer</span>
+              <span class="c-year">2019 Sep - until now</span>
+            </div>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+  </section>
+  <!--body2--> 
+  <section class="body2" id="skill">
+    <div class="title2-group">
+      <div class="t2-skills">Skills</div>
+      <div class="t2-contents-group">
+        <div class="t2-SA">Skills & Attributes</div><br>
+        <ul class="t2-discription">
+          <li>Experience with all phases of Software Development Life Cycle.</li>
+          <li>Passion for learning new technologies.</li>
+          <li>Working in a team environment with good relationship.</li>
+          <li>Ablility to plan and organising.</li>  
+          <li>Working under strict time pressure and adapting quickly when needed.</li> 
+        </ul>
+      </div>
+    </div>
+    <div class="section__container">
+      <div class="ex-block">
+        <div class="expert"> <!--강의에서는 왼쪽꺼에 해당-->
+          <!-- <span class="e1-titl">Skills</span> h3 로 했음 -->
+          <div class="e1-skill">
+            <div class="e1-myskill">
+              <span class="e1-item">HTML</span>
+              <span class="e1-perc">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 90%;"></div>
+            </div> <!--html에 progress bar가 있다-->
+          </div>
+          <div class="e1-skill">
+            <div class="e1-myskill">
+              <span class="e1-item">CSS</span>
+              <span class="e1-perc">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="e1-skill">
+            <div class="e1-myskill">
+              <span class="e1-item">JAVASCRIPT</span>
+              <span class="e1-perc">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="e1-skill">
+            <div class="e1-myskill">
+              <span class="e1-item">REACT</span>
+              <span class="e1-perc">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="e1-skill">
+            <div class="e1-myskill">
+              <span class="e1-item">NODEJS</span>
+              <span class="e1-perc">60%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 60%;"></div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- <div class="tools-etc">  <!--강의에서는 오른쪽꺼에 해당-->
+            <!-- <div class="tools">
+              <div class="tools-tit">Tools</div>
+              <span class="disc">
+                <ul>
+                  <li>Android development tools</li>
+                  <li>IOS development tools</li>
+                  <li>Sublime Text with Plug-ings</li>
+                  <li>Visual Studio</li>
+                  <li>Team Foundation</li>
+                  <li>Adobe Programs</li>
+                  <li>Sketch app</li>
+                </ul>
+              </span>
+            </div>
+            <ul class="etc">
+              <div class="b2-etc">Etc</div>
+              <li class="b2-git">Git</li>
+            </ul>  
+        </div> --> 
+      </div>
+    </div>
+  </section>
+  <!--body3-->
+  <section class="body3" id="mywork">
+    <div class="title3-group">
+      <span class="t3-mywork">My work</span>
+      <span class="t3-projects">Projects</span>
+      <div class="t3-skill-group">  <!--ul-div, li안쓰고 바루 button -->
+        <button class="t3-button selected" data-filter="*">All
+          <span class="category__count">5</span>
+        </button> <!--버튼사이에 span으로 카운트가 있어야 함-->
+        <button class="t3-button" data-filter="JavaScript">JavaScript
+          <span class="category__count">1</span>
+        </button>
+        <button class="t3-button" data-filter="ReactJS">ReactJS
+          <span class="category__count">3</span>
+        </button>
+        <button class="t3-button" data-filter="NodeJS">NodeJS
+          <span class="category__count">1</span>
+        </button>
+      </div>
+    </div>
+    <div class="section__container">
+      <div class="b3-project">
+        <!-- a href로 해당 사진을 클리시 Github의 프로젝트로 이동-->
+        <!--<a href="" class="project" target="blank"><img src alt>--> 
+        <!--마우스 올리면 간단한 설명 보이는 div>h3+span-->
+        <!-- 1st pic -->
+        <a 
+          href="https://github.com/Henry229/portfolio" 
+          class="project" 
+          data-type="JavaScript"
+          target="blank" 
+        >
+          <img
+            src="image/projects/Portfolio.png"
+            alt="portfolio"
+            class="project__img"
+          />
+          <div class="project__description">
+            <h3>Portfolio</h3>
+            <span>HTML, CSS, JS</span>
+          </div>
+        </a>
+        <!-- 2nd pic -->
+        <a
+          href="https://with-react-eb328.web.app/"
+          class="project"
+          data-type="ReactJS"
+          target="blank"
+        >
+          <img
+          src="image/projects/youtubeReact.png"
+          alt="Youtube"
+          class="project__img"
+          />
+          <div class="project__description">
+            <h3>Youtube</h3>
+            <span>ReactJS, HTML, PostCSS</span>
+          </div>
+        </a>
+        <!-- 3rd pic -->
+        <a
+          href="https://name-card-maker-a3009.web.app/"
+          class="project"
+          data-type="ReactJS"
+          target="blank"
+        >
+          <img 
+            src="image/projects/business_card-maker.png" 
+            class="project__img" 
+            alt="CardMaker" 
+          />
+          <div class="project__description">
+            <h3>Business Card Maker</h3>
+            <span>ReactJS, HTML, PostCSS, FireBase</span>
+          </div>
+        </a>
+        <!-- 4th pic -->
+        <a 
+          href="https://chattingwithfirebase-2426b.web.app/" 
+          class="project" 
+          data-type="ReactJS"
+        >
+          <img 
+            src="image/projects/chatting.png" 
+            class="project__img" 
+            alt="chatting" 
+          />
+          <div class="project__description">
+            <h3>Chatting</h3>
+            <span>ReactJS, HTML, CSS, FIreBase</span>
+          </div>
+        </a>
+        <!-- 5th pic -->
+        <a 
+          href="#" 
+          class="project" 
+          data-type="mobile"
+        >
+          <img 
+            class="project__img" 
+            src="image/projects/game.png" 
+            alt="" 
+          />
+          <div class="project__description">
+            <h3>Project</h3>
+            <span>Explanation</span>
+          </div>
+        </a>
+        <!-- 6th pic -->
+        <a 
+          href="#" 
+          class="project" 
+          data-type="mobile"
+        >
+          <img 
+            class="project__img" 
+            src="image/projects/game.png" 
+            alt="" 
+          />
+          <div class="project__description">
+            <h3>Project</h3>
+            <span>Explanation</span>
+          </div>
+        </a>
+        <!-- 7th pic -->
+        <a 
+          href="#" 
+          class="project" 
+          data-type="mobile"
+        >
+          <img 
+            class="project__img" 
+            src="image/projects/game.png" 
+            alt="" 
+          />
+          <div class="project__description">
+            <h3>Project</h3>
+            <span>Explanation</span>
+          </div>
+        </a>
+        <!-- 8th  pic -->
+        <a 
+          href="#" 
+          class="project" 
+          data-type="mobile"
+        >
+          <img 
+            class="project__img" 
+            src="image/projects/game.png" 
+            alt="" 
+          />
+          <div class="project__description">
+            <h3>Project</h3>
+            <span>Explanation</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--body4-->
+  <section class="body4" id="testimonial">
+    <div class="title4-group">
+      <span class="t4-testim">Testimonials</span> <!--div로 안묶고 바로 h1 밑에꺼는 h3로 -->
+      <span class="t4-comment">See what they say about me</span>
+    </div>
+    <div class="section__container">
+      <div class="refer-group">
+        <div class="refer">
+          <img src="image/testimonial/people1.jpg"
+           alt="People" 
+           class="testmonial-avatar">
+          <div class="comment-bubble">
+            <div class="comment">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eaque fuga libero nulla eveniet aperiam laborum, 
+                quis provident quibusdam officiis reprehenderit, 
+                placeat neque perspiciatis vero explicabo tempora, 
+                dignissimos accusantium inventore ducimus!.
+              </p>
+              <p class="name"><a href="">Henry</a> / Peter</p>
+            </div>
+          </div>         
+        </div>
+        <div class="refer">
+          <div class="comment-bubble">
+            <div class="comment">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eaque fuga libero nulla eveniet aperiam laborum, 
+                quis provident quibusdam officiis reprehenderit, 
+                placeat neque perspiciatis vero explicabo tempora, 
+                dignissimos accusantium inventore ducimus!.
+              </p>
+              <p class="name"><a href="">Henry</a> / Peter</p>
+            </div>
+          </div>
+          <img src="image/testimonial/people1.jpg"
+           alt="People" 
+           class="testmonial-avatar">
+        </div>      
+      </div>
+    </div>
+  </section>
+  <!--footer-->
+  <section class="contact" id="contact">
+    <h1 class="contact-title">Let's talk</h1>
+    <h2 class="contact-email">chunhyungjoon@gmail.com</h2>
+    <div class="contact__links">
+      <a href="https://github.com/dream-ellie" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="#" target="_blank">
+        <i class="fa fa-linkedin-square"></i>
+      </a>
+    </div>
+    <p class="contact-rights">
+      2021 Dream Coding Henry - All rights reserved
+    </p>
+  </section>
+  <button class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</body>
+
+</html>

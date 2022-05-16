@@ -1,0 +1,755 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --light-white-color: #eeeeee;
+  --black-color: black;
+  --light-blue-color: #73aace;
+  --blue-color: #73aace;
+  --red-color:  #ff0000;
+  --pink-color: pink;
+  --ocean-color: #2bd2ff;
+  --strong-color: #64ffda;
+  --purple-color: #895293;
+  --dark-pink-color: #815a5a;
+  --grey-dark-color: #4d4d4d;
+  --grey-color:#616161;
+  --grey-letter-color: #ccd6f6;
+  --grey-dark-letter-color: #8892b0;
+  --grey-light-color: #aca9a9;
+  --yellow-color: #fff7d1;
+  --orange-color: #feb546;
+  --background-blue-color: #0A192F;
+  --button-letterhover-color: #80634C;
+  --bubble-ground-color: #FBEAFF;
+
+  /* size */
+  --padding: 12px;
+  --big-padding: 20px
+  --shape-size: 36px;
+  --logo-size: 70px;
+  --icon-size: 70px;
+  --skill-size: 170px;
+  --picture-size: 250px;
+
+  /* Font size */
+  --font-xlarge: 54px;
+  --font-large: 48px;
+  --font-large-small: 34px;
+  --font-medium: 28px;
+  --font-reg-medium: 24px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* a 글자 가운데에 놓는 방법 */
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+/* section common */
+section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+/* responsive의 일환으로 브라우져가 무한정 늘어날 *
+/* 대비해서 무한정 늘어나는 것들의 contents를 */
+/* 길이의 최대치를 설정해준다. */
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header .nav {
+  position: fixed; /* JS1. 맨위 메뉴바 고정 */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: var(--padding);
+  color: var(--white-color);
+  background: linear-gradient(0.25turn, #040203, #432349);
+  background-color: transparent;
+  transition: all 300ms ease-in-out;
+  z-index: 1;
+}
+
+/* JS3. Js에서 생성된 클래스를 discription해줌 */
+.header .nav-dark {
+  background: linear-gradient(0.25turn, #040203, #432349);
+}
+
+.header .nav .nav-left {
+  font-size: var(--font-medium);
+  font-weight: bold;
+} 
+
+.header .nav .nav-right {
+  display: flex;
+}
+
+/* 간격을 벌려서 놓는 법은? - 나는 메뉴버튼 부모 즉 nave-right에 마진을 줬다 메뉴버튼에 직접 margin과 padding을 줘야 함*/
+.header .nav .nav-right li {
+  padding: 8px 12px;
+  margin-top: 0 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.header .nav .nav-right .menu-item.active,
+.header .nav .nav-right .meunu-item:hover {
+  background-color: var(--purple-color);
+  border: 1px solid var(--white-color);
+  border-radius: 4%;
+}
+
+/* toggle btn */
+.navbar__toggle-btn {
+  position: absolute;
+  top: 18px;
+  right:32px;
+  font-size: 24px;
+  color: var(--white-color);
+  display: none; /*평소엔 보이면 안됨 */
+}
+
+/* 배경에 그림 놓는 방법 */
+.body-group {
+  background: url("image/portfolio background.png") center/cover no-repeat;
+  color: var(--white-color);
+}
+
+/* body at first page */
+.body-group .home__container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  padding-top: 100px; /* js2. 메뉴바와 사진이 붙어있어서 */
+}
+
+.henry-photo {
+  width: var(--picture-size);
+  height: var(--picture-size);
+  border-radius: 50%;
+  border: 2px solid var(--light-white-color);
+  margin-bottom: 16px;
+}
+
+.b-hell,
+.b-me {
+  font-size: var(--font-xlarge);
+  font-weight: bold;
+  margin-bottom: 16px, 0px;
+}
+
+.home__container div {
+  height: 16px;
+}
+
+.body-group .b-discription {
+  font-size: var(--font-medium);
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--grey-letter-color)
+}
+
+.body-group .b-contact {
+  color: var(--white-color);
+  font-size: var(--font-regular);
+  font-weight: bold;
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--white-color);
+  border-radius: 4px;
+}
+
+
+/* body1 */
+#about,
+.body1 {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+  background: linear-gradient(to bottom, #2C1730, #0A192F);
+  /* background-color: var(--background-blue-color); */
+}
+
+.body1-group {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.body1 .title1-group {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.body1 .title1-group .t1-about {
+  font-size: var(--font-large);
+  font-weight: bold;
+  margin: 16px 0;
+  color: var(--grey-letter-color);
+}
+
+.content1-group {
+  width: 100%;
+  padding: 10px;
+  font-size: var(--font-reg-medium);
+  line-height: 30px;
+  
+}
+
+.t1-contents {
+  /* margin: 16px 0; */
+  color: var(--grey-dark-letter-color);
+}
+
+.body1 .skill-group {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 0;
+}
+.body1 .skill-group .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: var(--padding);
+}
+
+/* 동그란 경계선 넣는 방법 --width,height를 넣어야 함*/
+.body1 .skill-group .skill-div {
+  width: var(--skill-size);
+  height: var(--skill-size);
+  font-size: var(--icon-size);
+  margin: auto;
+  color: var(--light-blue-color);
+  line-height: var(--skill-size);
+  border: 1px solid var(--light-blue-color);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.body1 .skill-group i {
+  transition: all 300ms ease;
+}
+
+/* .body1 .skill-group i:hover */
+/* .body1 .skill-group:hover i 의 차이점을 알아야 한다. */
+/* 맨위같이 하면 동그라미와 아이콘이 같이 돌아간다. 아이콘만 하려면 2째줄같이 */
+/* 단 아이콘을 div로 감싸야 먹고 이 i에다 에니메이션이나 회전을 걸어야 함 */
+.body1 .skill-group .skill:hover {
+  color: var(--ocean-color);
+  transform: scale(1.1);
+}
+
+.body1 .skill-group .skill .s1-major {
+  font-size: var(--font-medium);
+  font-weight: bold;
+  color: var(--ocean-color);
+}
+
+.body1 .skill-group .skill .s1-subject {
+  font-size: var(--font-small);
+  color: var(--strong-color);
+}
+
+.body1 .skill-group .skill .s1-subject  {
+ margin: 12px 0;
+}
+
+.content2-group {
+  width: 100%;
+  padding: 10px;
+  font-size: var(--font-reg-medium);
+  line-height: 30px;
+  color: var(--grey-dark-letter-color);
+}
+
+
+/* .t1-contents {
+  margin: 16px 0;
+} */
+
+/* .t2-contents {
+  color: var(--grey-dark-letter-color);
+} */
+
+
+/* .body1 .career-group .company {
+  display: flex;
+  margin-left: var(--padding);
+}
+
+.body1 .career-group .company i {
+  font-size: var(--logo-size);
+}
+
+.body1 .career-group .company .c-career {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-left: var(--padding);
+}
+
+.c-role {
+  font-size: var(--font-small);
+}
+
+.c-yhear {
+  font-size: var(--font-micro);
+} */
+
+
+/* body2 */
+.body2 {
+  background-color: var(--background-blue-color);
+}
+
+.body2 .title2-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.body2 .title2-group .t2-skills {
+  font-size: var(--font-large);
+  font-weight: bold;
+  color: var(--grey-letter-color);
+  margin-bottom: 16px;
+}
+
+.body2 .title2-group .t2-contents-group {
+  /* width: 100%; */
+  padding: 10px;
+  font-size: var(--font-reg-medium);
+  line-height: 30px;
+  color: var(--grey-dark-letter-color);
+}
+
+.t2-SA {
+  font-size: var(--font-large-small);
+  color: var(--grey-letter-color);
+  margin-bottom: 0.2em;
+}
+/* 플렉스 상태에서 박스 가운데 놓는법과 안에 색칠하는 법*/
+.body2 .ex-block {
+  display: flex;
+  background-color: var(--grey-light-color);
+  color: var(--light-white-color);
+  margin-top: var(--padding) 0;
+}
+
+/* .body2 .ex-block .expert .e1-titl{
+  color: var(--white-color);
+  margin-bottom: 12px 0;
+} */
+
+.body2 .ex-block .expert {
+  flex-basis: 100%;
+  background-color: var(--grey-dark-color);
+  margin-top: 1em;
+  padding: 2em 3em;
+}
+/* bar를 div로 지정해 놔서 안에 콘텐츠가 없기에 width를 지정해줘야 함 */
+.skill-bar {
+  width: 100%;
+  height: 1em;
+  background-color: var(--grey-color);
+}
+/* 여기서 width를 안주고 html에서 준다 아니면 html에서 각각 다른 이름 */
+/* 으로 지정하여 css에서 각각 값을 지정해줘야 하므로 코딩량이 많아짐 */
+/* 그래서 아래와 같이 해줘야  */
+.skill-value {
+  height: 1em;
+  background-color: var(--orange-color);
+}
+
+.e1-skill {
+  margin-bottom: 32px;
+}
+
+.body2 .ex-block .expert .e1-myskill {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.tools-etc .tools {
+  background-color: var(--grey-color);
+  padding: 20px 40px;
+}
+
+.tools-etc .tools .tools-tit {
+  margin-bottom: 12px;
+}
+
+.tools-etc .etc {
+  padding: 20px 40px;
+}
+
+.tools-etc .etc .b2-etc {
+  margin-bottom: 12px;
+}
+
+
+
+.body2 .tools-etc {
+  flex-basis: 40%;
+}
+
+/* My work */
+
+.body3 {
+  background-color: var(--background-blue-color);
+}
+
+.body3 .title3-group {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.body3 .title3-group .t3-mywork {
+  font-size: var(--font-large);
+  font-weight: bold;
+  color: var(--grey-letter-color);
+  margin: 12px 0;
+}
+
+.t3-projects {
+  font-size: var(--font-large-small);
+  color: var(--grey-letter-color);
+  margin-bottom: 0.2em;
+}
+
+.body3 .title3-group .t3-skill-group {
+  margin: 40px;
+}
+
+.t3-button {
+  /* width: 20%; */
+  border: 2px solid var(--light-white-color);
+  border-radius: 4px;
+  color: var(--grey-letter-color);
+  font-size: var(--font-regular);
+
+  padding: 8px 48px;
+  position: relative; /* 아래 category-count가 absolute로 변경하여 이리 지정*/
+}
+
+.t3-button.selected,
+.t3-button:hover {
+  background-color: var(--ocean-color);
+  color: var(--button-letterhover-color);
+}
+
+.t3-button.selected .category__count,
+.t3-button:hover .category__count {
+  opacity: 1; /* 안보이던 번호를 보이게하고 위치를 위로했던 것을 아래로 내리는 효과*/
+  top: 0;
+}
+
+.category__count {
+  background-color: var(--orange-color);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block; /* 해당 버튼이 span으로 돼있어서 동그라미 글자가 이쁘지 않게 나온다.*/
+  position: absolute;    /* 충분한 공간을 만들어 주기 위해 inline-block으로 설정 */
+  top: -20px;      /* 박스안에 글자가 이 숫자때문에 옆으로 밀려있어서 relative에서 */
+  right: 16px;       /* absolute로 변경 */
+  opacity: 0; /* 평소에는 안보이게 함 */
+  transition: all 300ms ease-in;
+}
+
+.body3 .b3-project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
+  transition: all 300ms ease-in;
+}
+
+.body3 .b3-project.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
+
+.project {
+  /* 아래를 안해주면 주석이 1페이지 맨위로 간다 */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--grey-light-color);
+}
+
+/* 원하는 프로젝트만 filtering */
+.project.invisible {
+  display: none;
+}
+
+/* 위에서 정한 박스안에서 원래이미지 사이즈에 상관없이 맞출려고할떄 */
+/* 이걸 안하면 정한 박스를 넘어가게 되거나 작은 그림은 이상하게 된다 */
+.project__img {
+  width:100%;
+  height:100%;
+  object-fit: fill;
+  padding:0.5em;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* 아래 주석은 원래 사진 아래 놓이게 되는데 */
+/* hover하게 되면 원래 있던 위치를 변경하게 되어 absolute를 씀 */
+.project__description {
+  position: absolute;
+  background-color: var(--black-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 100%;
+  width: 100%; /* 이걸 안하면 박스를 꽉채워지지 않고 원래 크기 */
+  height: 100%; /* 만큼만 채워진다. */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 300ms ease-in;
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description h3 {
+  color: var(--orange-color);
+}
+
+/* 문장사이 간격을 위해 html에서도 할수 있지만 css에서 하는 방법 */
+.project__description h3:after {
+  content: ' ';
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  transform: translateX(-50%
+  ); /* left50%로 정중앙이 아닌 약간 오른  */
+  margin-top: 8px;
+  background-color: var(--grey-dark-color);
+}
+
+/* Testmonial */
+
+.body4 {
+  background-color: var(--background-blue-color);
+}
+
+.body4 .title4-group {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.body4 .title4-group .t4-testim {
+  font-size: var(--font-large);
+  font-weight: bold;
+  color: var(--grey-letter-color);
+  margin: 12px;
+}
+
+.body4 .title4-group .t4-comment {
+  font-size: var(--font-large-small);
+  color: var(--grey-letter-color);
+  margin: 4px;
+}
+
+.body4 .refer-group .refer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.testmonial-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testmonial-avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testmonial-avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.comment-bubble {
+  background-color: var(--bubble-ground-color);
+  border-radius: 4px;
+  padding: 20px;
+  color: var(--grey-color);
+}
+
+.comment a {
+  color: var(--red-color);
+}
+
+/* footer */
+.contact {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+}
+
+.contact h1{
+  font-size: var(--font-large);
+  margin: 32px 0;
+}
+
+.contact h2 {
+  font-size: var(--font-medium);
+  margin: 8px 0;
+}
+
+.contact .contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact .contact-rights {
+  font-size: var(--font-regular);
+  margin: 8px 0;
+}
+
+
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--white-color);
+  background-color: var(--pink-color);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* for below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+    top: 16px;
+    right: 16px;
+    /* font-size: 18px; */
+  }
+
+  .header .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(0.25turn, #040203, #432349);
+  }
+
+  .header .nav .nav-right {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .header .nav .nav-right.open {
+    display: block;
+  }
+
+  .body1 .section__container .skill-group {
+    flex-direction: column;
+  }
+
+  .body2 .ex-block {
+    flex-direction: column;
+  }
+
+  .t3-button {
+    margin: 4px 0;
+    width: 100%;
+  }
+  .body3 .section__container .project {
+    flex-grow: 1;
+  }
+
+  /* testtimonial */
+  .refer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testmonial-avatar {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 16px;
+  }
+
+  .testmonial-avatar:nth-child(even) {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  
+  .comment-bubble {
+    order: 1;
+  }
+
+  .arrow-up {
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+}
